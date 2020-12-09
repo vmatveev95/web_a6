@@ -20,7 +20,7 @@ export class PostService {
       perPage: perPage
     }
 
-    return this.http.get<BlogPost[]>(`https://weba555.herokuapp.com/api/posts`, { params });
+    return this.http.get<BlogPost[]>(`https://web-a5.herokuapp.com/api/posts`, { params });
   }
 
   // Get posts per page
