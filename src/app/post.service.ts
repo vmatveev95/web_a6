@@ -40,37 +40,37 @@ export class PostService {
       params["category"] = category;
     }
 
-    return this.http.get<BlogPost[]>(`https://weba555.herokuapp.com/api/posts`,{ params });
+    return this.http.get<BlogPost[]>(`https://web-a5.herokuapp.com/api/posts`,{ params });
   }
 
   // Get post by id
   getPostByID(id): Observable<BlogPost> {
-    return this.http.get<BlogPost>(`https://weba555.herokuapp.com/api/posts/${id}`);
+    return this.http.get<BlogPost>(`https://web-a5.herokuapp.com/api/posts/${id}`);
   }
 
   // Create new post
   newPost(data: BlogPost): Observable<any> {
-    return this.http.post<any>(`https://weba555.herokuapp.com/api/posts`, data);
+    return this.http.post<any>(`https://web-a5.herokuapp.com/api/posts`, data);
   }
 
   // Update post
   updatePostById(id: string, data: BlogPost): Observable<any> {
-    return this.http.put<any>(`https://weba555.herokuapp.com/api/posts/${id}`, data);
+    return this.http.put<any>(`https://web-a5.herokuapp.com/api/posts/${id}`, data);
   }
 
   // Delete post
   deletePostById(id: string): Observable<any> {
-    return this.http.delete<any>(`https://weba555.herokuapp.com/api/posts/${id}`);
+    return this.http.delete<any>(`https://web-a5.herokuapp.com/api/posts/${id}`);
   }
 
   // Get categories
   getCategories(): Observable<any> {
-    return this.http.get<any>(`hhttps://arnin-blogapi.herokuapp.com/api/categories`);
+    return this.http.get<any>(`https://web-a5.herokuapp.com/api/categories`);
   }
 
   // Get tags
   getTags(): Observable<string[]> {
-    return this.http.get<string[]>(`https://arnin-blogapi.herokuapp.com/api/tags`);
+    return this.http.get<string[]>(`https://web-a5.herokuapp.com/api/tags`);
   }
 
 }
